@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pbz-uJ-JXD">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Famous_Cities_Of_Turkey" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="96b-bS-cfC">
+                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="96b-bS-cfC" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="2LB-vH-Kby"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="96b-bS-cfC" secondAttribute="trailing" id="LGo-Vo-wlW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="96b-bS-cfC" secondAttribute="bottom" id="oYT-eb-ZyK"/>
+                            <constraint firstItem="96b-bS-cfC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="r61-CJ-ZHW"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="xpC-sp-IH0"/>
+                    <connections>
+                        <outlet property="tableView" destination="96b-bS-cfC" id="K2J-fu-4ij"/>
+                        <segue destination="P3r-T8-NIk" kind="show" identifier="todetailsVC" id="H9r-ru-sAi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="976.33587786259534" y="3.5211267605633805"/>
+        </scene>
+        <!--DetailsVC-->
+        <scene sceneID="9uj-h0-yDF">
+            <objects>
+                <viewController id="P3r-T8-NIk" customClass="detailsVC" customModule="Famous_Cities_Of_Turkey" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vmf-Mh-5rM">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="09n-qw-exM">
+                                <rect key="frame" x="117" y="531" width="158" height="52"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="IZY-kA-4ii"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="k3a-ka-hYj">
+                                <rect key="frame" x="76" y="136" width="240" height="266"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="266" id="4Um-5l-Eri"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="FN5-Na-Hrl"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="k3a-ka-hYj" firstAttribute="leading" secondItem="FN5-Na-Hrl" secondAttribute="leading" constant="76" id="EcF-yu-799"/>
+                            <constraint firstItem="k3a-ka-hYj" firstAttribute="centerX" secondItem="09n-qw-exM" secondAttribute="centerX" id="Edo-8Z-al8"/>
+                            <constraint firstItem="k3a-ka-hYj" firstAttribute="centerX" secondItem="vmf-Mh-5rM" secondAttribute="centerX" id="Fpe-Na-ZuX"/>
+                            <constraint firstItem="k3a-ka-hYj" firstAttribute="top" secondItem="FN5-Na-Hrl" secondAttribute="top" constant="33" id="Gdu-T4-VbQ"/>
+                            <constraint firstItem="FN5-Na-Hrl" firstAttribute="bottom" secondItem="09n-qw-exM" secondAttribute="bottom" constant="235" id="U4L-EL-9Tc"/>
+                            <constraint firstItem="09n-qw-exM" firstAttribute="leading" secondItem="FN5-Na-Hrl" secondAttribute="leading" constant="117" id="uEx-Bz-tlM"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="fTd-89-gFi"/>
+                    <connections>
+                        <outlet property="cityImageView" destination="k3a-ka-hYj" id="XF0-TI-Rg1"/>
+                        <outlet property="cityNameLabel" destination="09n-qw-exM" id="HWu-kR-X8y"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PPm-qx-C5t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1733.5877862595419" y="3.5211267605633805"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="9ou-qU-Vq7">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="pbz-uJ-JXD" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="2el-9v-NiR">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="09L-Wf-a9i"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="09T-CK-WNX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="49.618320610687022" y="3.5211267605633805"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
